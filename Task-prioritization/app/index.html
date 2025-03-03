@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Prioritization</title>
+    <script>
+      async function prioritizeTasks() {
+        const participant = document.getElementById("participant").value;
+        const time = document.getElementById("time").value;
+
+        const response = await fetch("/prioritize", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: `participant=${participant}&time=${time}`,
+        });
+
+        const tasks = await response.json();
+        const resultDiv = document.getElementById("results");
+        resultDiv.innerHTML = "<h3>Prioritized Tasks:</h3>";
+
+        tasks.forEach((task) => {
+          resultDiv.innerHTML += `<p>${task.name} (Value: ${task.value}, Duration: ${task.duration})</p>`;
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Task Prioritization</h1>
+    <label for="participant">Select Participant:</label>
+    <select id="participant">
+      <option value="0">Participant 1</option>
+      <option value="1">Participant 2</option>
+    </select>
+    <br /><br />
+    <label for="time">Available Time (hours):</label>
+    <input type="number" id="time" value="100" />
+    <br /><br />
+    <button onclick="prioritizeTasks()">Prioritize Tasks</button>
+    <div id="results"></div>
+  </body>
+</html>
