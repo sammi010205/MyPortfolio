@@ -1,8 +1,4 @@
-# # quiz-08
-
-Vide: https://www.loom.com/share/e951997100fb40e086b56d7307f48feb?sid=a479258e-3036-4ebb-beb2-ceb35393eda8
-
-In this quiz, you will implement functionality for an item picker and a selected items list using React. You are given the initial structure with components but need to add functionality based on the following requirements:
+I will implement functionality for an item picker and a selected items list using React:
 
 Task 1: Adding an Item
 - When a user clicks the + button next to an item in the ItemPicker component, the item should be moved to the ItemsSelected component (the selected items list).
@@ -20,23 +16,4 @@ Task 4: Counter Header
 - after adding an item the counter at the Header should increment, reflecting the total number of items in the selected list.
 - deleting an item should also update this counter
 
-[Optional Challenge - non graded]: Search Functionality
--	Implement a search input in the ItemPicker component.
--	When users type into the search field, the list of items should filter based on the input.
--	Items should be filtered by matching the name or the subtitle.
-
-[Optional Challenge] Search Functionalitty
-![CleanShot 2022-03-14 at 23 19 59](https://user-images.githubusercontent.com/1692542/158322554-1fe2663c-30d1-44dd-9cd4-eba58e55bd46.gif)
-
-
-## Grading Criteria (10 points total)
-1. Add Item Functionality (4 points):
-  -	When a user clicks the + button next to an item in the ItemPicker component, the item should move to the ItemsSelected list.
-  -	The item should no longer appear in the ItemPicker once it is selected.
-2. Add All Functionality (1 point):
-  -	When the user clicks the Add All button, all items from the ItemPicker should move to the ItemsSelected list.
-  -	The ItemPicker should be empty after this action.
-3. Remove Item Functionality (4 points):
-  -	When a user clicks the X button next to an item in the ItemsSelected list, the item should move back to the ItemPicker list.
-  -	The item should no longer appear in the ItemsSelected list.
-4. Header counter (1 point)
+Task 5: Search Functionalitty
