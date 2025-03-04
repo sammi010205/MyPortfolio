@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.item-picker-wrapper {
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-rows: 100px 482px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header header"
+    "search search selected selected";
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  height: 620px;
+  gap: 15px
+}
+
+.header {
+  grid-area: header;
+  margin-left: 5px;
+}
+
+.header h1 {
+  font-size: 22px;
+}
+
+.item-picker {
+  grid-area: search;
+}
+
+.items-selected {
+  grid-area: selected;
+}
